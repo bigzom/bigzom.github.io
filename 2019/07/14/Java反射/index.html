@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://yoursite.com">
-  <title>Hello World | zom的博客</title>
+  <title>Java反射 | zom的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hexo自己的帮助文档">
-<meta name="keywords" content="hexo">
+  <meta name="description" content="JAVA反射（运行时）动态获取类信息、动态调用对象方法  判断一个对象所属的类 构造任意一个类的对象 判断任意一个类所具有的成员变量和方法 调用任意一个对象和方法">
+<meta name="keywords" content="java,反射">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://yoursite.com/2019/06/30/hello-world/index.html">
+<meta property="og:title" content="Java反射">
+<meta property="og:url" content="https://yoursite.com/2019/07/14/Java反射/index.html">
 <meta property="og:site_name" content="zom的博客">
-<meta property="og:description" content="hexo自己的帮助文档">
+<meta property="og:description" content="JAVA反射（运行时）动态获取类信息、动态调用对象方法  判断一个对象所属的类 构造任意一个类的对象 判断任意一个类所具有的成员变量和方法 调用任意一个对象和方法">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-30T17:40:00.591Z">
+<meta property="og:updated_time" content="2019-07-14T11:08:52.212Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="hexo自己的帮助文档">
+<meta name="twitter:title" content="Java反射">
+<meta name="twitter:description" content="JAVA反射（运行时）动态获取类信息、动态调用对象方法  判断一个对象所属的类 构造任意一个类的对象 判断任意一个类所具有的成员变量和方法 调用任意一个对象和方法">
   
     <link rel="alternative" href="/atom.xml" title="zom的博客" type="application/atom+xml">
   
@@ -149,42 +149,55 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java反射" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Java反射
     </h1>
   
 
         
-        <a href="/2019/06/30/hello-world/" class="archive-article-date">
-  	<time datetime="2019-06-30T14:25:11.858Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-30</time>
+        <a href="/2019/07/14/Java反射/" class="archive-article-date">
+  	<time datetime="2019-07-14T03:42:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-14</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a>  </p>
-<a id="more"></a>
-
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        <h3 id="JAVA反射（运行时）"><a href="#JAVA反射（运行时）" class="headerlink" title="JAVA反射（运行时）"></a>JAVA反射（运行时）</h3><p>动态获取类信息、动态调用对象方法</p>
+<ol>
+<li>判断一个对象所属的类</li>
+<li>构造任意一个类的对象</li>
+<li>判断任意一个类所具有的成员变量和方法</li>
+<li>调用任意一个对象和方法<a id="more"></a>
+<h3 id="反射的好处"><a href="#反射的好处" class="headerlink" title="反射的好处"></a>反射的好处</h3>编译器将.java文件编译成.class文件之后，普通方式创建的对象就不能再变了，我只能选择是运行还是不运行这个.class文件。是不是感觉很僵硬，假如现在我有个写好的程序已经放在了服务器上，每天供人家来访问，这时候Mysql数据库宕掉了，改用Oracle,这时候该怎么怎么办呢？假如没有反射的话，我们是不是得修改代码，将Mysql驱动改为Oracle驱动，重新编译运行，再放到服务器上。是不是很麻烦，还影响用户的访问。<br>假如我们使用反射Class.forName()来加载驱动，只需要修改配置文件就可以动态加载这个类，Class.forName()生成的结果在编译时是不可知的，只有在运行的时候才能加载这个类，换句话说，此时我们是不需要将程序停下来，只需要修改配置文件里面的信息就可以了。这样当有用户在浏览器访问这个网站时，都不会感觉到服务器程序程序发生了变化。<br><a href="https://www.cnblogs.com/bihanghang/p/9992237.html" title="Java反射的好处" target="_blank" rel="noopener">摘自bihang的博客</a></li>
+</ol>
+<h3 id="通过反射调用类的方法"><a href="#通过反射调用类的方法" class="headerlink" title="通过反射调用类的方法"></a>通过反射调用类的方法</h3><ol>
+<li>获取class对象<br>第一种：通过Class.forName 静态方法获取<br>该方法需要知道完整的包路径<br><code>Class classtype = Class.forName(&quot;com.lql.reflextest.ReflexTest1&quot;);</code><br>第二种：使用.class方法获取<br>已明确知道有该类<br><code>Class classtype = ReflexTest1.class;</code><br>第三种: 使用类对象的 getClass() 方法(<font color="red">前提是该对象已实例化</font>)<br><code>Class classtype = reflexTest1.getClass();</code></li>
+</ol>
+<ul>
+<li><font color="red">对类进行实例化</font><br><code>Object invoketest = classtype.newInstance();</code><br>也可用new 来实例化对象</li>
+</ul>
+<ol start="2">
+<li>获取到对象的方法 getMethod()</li>
+</ol>
+<ul>
+<li>add:需调用类的方法</li>
+<li>int.class： 指定参数<br>需要上面两个参数的原因是可以保证唯一性，因为方法的重载，可以有相同的方法名<br><code>Method  method1 = classtype.getMethod(&quot;add&quot; ,int.class,int.class);</code></li>
+</ul>
+<ol start="3">
+<li>调用方法 </li>
+</ol>
+<ul>
+<li>reflexTest1：实例化的对象</li>
+<li>1，2：传入调用方法的参数<br><code>Object result1 = method1.invoke(reflexTest1,1,2);</code></li>
+</ul>
+<h3 id="完整示例代码"><a href="#完整示例代码" class="headerlink" title="完整示例代码"></a>完整示例代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.lql.reflextest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.InvocationTargetException;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReflexTest1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> param1, <span class="keyword">int</span> param2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> param1 + param2;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">say</span><span class="params">(String param1)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"say:"</span> + param1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 第一种获取类的方式</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestReflex1</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ReflexTest1 reflexTest1 = <span class="keyword">new</span> ReflexTest1();</span><br><span class="line">        Class classtype = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            classtype = Class.forName(<span class="string">"com.lql.reflextest.ReflexTest1"</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</span><br><span class="line">            System.out.println(<span class="string">"没有发现到该类！"</span>);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        Method method1 = <span class="keyword">null</span>;</span><br><span class="line">        Method method2 = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            method1 = classtype.getMethod(<span class="string">"add"</span> ,<span class="keyword">int</span>.class,<span class="keyword">int</span>.class);</span><br><span class="line">            method2 = classtype.getMethod(<span class="string">"say"</span> ,String.class);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NoSuchMethodException e) &#123;</span><br><span class="line">            System.out.println(<span class="string">"没有该方法！"</span>);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        Object result1 = <span class="number">0</span>;</span><br><span class="line">        Object result2 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//注意这里传的时实例化的对象</span></span><br><span class="line">            result1 = method1.invoke(reflexTest1,<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line">            result2 = method2.invoke(reflexTest1,<span class="string">"hello"</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InvocationTargetException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(result1);</span><br><span class="line">        System.out.println(result2);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *第二种获取类的方式</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestReflex2</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Class classtype = ReflexTest1.class;</span><br><span class="line">        Object invoketest =<span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            invoketest = classtype.newInstance();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InstantiationException e) &#123;</span><br><span class="line">            System.out.println(<span class="string">"实例化失败啦：不能是抽象类、接口、数组类、基本类型或 void； "</span> +</span><br><span class="line">                    <span class="string">"或者该类没有 null 构造方法； 或者由于其他某种原因导致实例化失败"</span>);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</span><br><span class="line">            System.out.println(<span class="string">"实例化失败啦：该类或其 null 构造方法是不可访问的"</span>);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        Method method1 = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            method1 = classtype.getMethod(<span class="string">"add"</span>,<span class="keyword">int</span>.class,<span class="keyword">int</span>.class);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NoSuchMethodException e) &#123;</span><br><span class="line">            System.out.println(<span class="string">"没有该方法"</span>);</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        Object result = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            result = method1.invoke(invoketest,<span class="number">1</span>,<span class="number">3</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InvocationTargetException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -197,7 +210,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">反射</a>
         		</li>
       		
 		</ul>
@@ -253,7 +270,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://yoursite.com/2019/06/30/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yoursite.com/2019/07/14/Java反射/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -267,15 +284,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/07/01/Hexo的搭建+Github托管/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Hexo的搭建以及交给Github托管
-        
-      </div>
-    </a>
   
+    <a href="/2019/07/13/JVM学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JVM学习</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
