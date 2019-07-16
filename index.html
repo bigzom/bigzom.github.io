@@ -167,21 +167,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><p>通过类是实例化对象<br>此处调用的是无参构造器</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Class classtype = Class.forName(<span class="string">"com.lql.reflextest.Student"</span>);</span><br><span class="line">classtype.newInstance();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过构造器实例化对象<br>此处调用无参构造器实例化对象，可以说和上面的一样</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//调用无参构造器，实例化对象</span><br><span class="line">Constructor cons1 = classtype.getConstructor();</span><br><span class="line">Object ins1 = cons1.newInstance();</span><br><span class="line">System.out.println(&quot;---------------------&quot;);</span><br><span class="line">//调用有参构造器，实例化对象</span><br><span class="line">Constructor cons = classtype.getConstructor(int.class, String.class, String.class);</span><br><span class="line">Object ins = cons.newInstance(1,&quot;lql&quot;,&quot;M&quot;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>完整代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> String sex;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"调用了无参构造方法"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(<span class="keyword">int</span> id, String name, String sex)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"调用了有参构造方法"</span>);</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.sex = sex;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>通过类是实例化对象<br>此处调用的是无参构造器<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Class classtype = Class.forName(<span class="string">"com.lql.reflextest.Student"</span>);</span><br><span class="line">classtype.newInstance();</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RelexTest3</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException </span>&#123;</span><br><span class="line">        <span class="comment">//调用无参构造器，实例化对象</span></span><br><span class="line">        Class classtype = Class.forName(<span class="string">"com.lql.reflextest.Student"</span>);</span><br><span class="line">        classtype.newInstance();</span><br><span class="line">        System.out.println(<span class="string">"---------------------"</span>);</span><br><span class="line">        <span class="comment">//调用无参构造器，实例化对象</span></span><br><span class="line">        Constructor cons1 = classtype.getConstructor();</span><br><span class="line">        Object ins1 = cons1.newInstance();</span><br><span class="line">        System.out.println(<span class="string">"---------------------"</span>);</span><br><span class="line">        <span class="comment">//调用有参构造器，实例化对象</span></span><br><span class="line">        Constructor cons = classtype.getConstructor(<span class="keyword">int</span>.class, String.class, String.class);</span><br><span class="line">        Object ins = cons.newInstance(<span class="number">1</span>,<span class="string">"lql"</span>,<span class="string">"M"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行结果图：<br><img src="/img/1.png" alt="avator"></p>
-
+        
+          <a class="article-more-a" href="/2019/07/16/通过反射实例化对象的两种方式/#more">more >></a>
+        
       
 
       
@@ -875,11 +867,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">jvm</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jvm</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">

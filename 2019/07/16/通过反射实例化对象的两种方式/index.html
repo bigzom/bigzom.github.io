@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="https://yoursite.com">
   <title>通过反射实例化对象的两种方式 | zom的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="通过类是实例化对象此处调用的是无参构造器 12Class classtype = Class.forName(&quot;com.lql.reflextest.Student&quot;);classtype.newInstance();  通过构造器实例化对象此处调用无参构造器实例化对象，可以说和上面的一样 1234567//调用无参构造器，实例化对象Constructor cons1 = classtype.g">
+  <meta name="description" content="通过类是实例化对象此处调用的是无参构造器12Class classtype = Class.forName(&quot;com.lql.reflextest.Student&quot;);classtype.newInstance();">
 <meta name="keywords" content="java,反射">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通过反射实例化对象的两种方式">
 <meta property="og:url" content="https://yoursite.com/2019/07/16/通过反射实例化对象的两种方式/index.html">
 <meta property="og:site_name" content="zom的博客">
-<meta property="og:description" content="通过类是实例化对象此处调用的是无参构造器 12Class classtype = Class.forName(&quot;com.lql.reflextest.Student&quot;);classtype.newInstance();  通过构造器实例化对象此处调用无参构造器实例化对象，可以说和上面的一样 1234567//调用无参构造器，实例化对象Constructor cons1 = classtype.g">
+<meta property="og:description" content="通过类是实例化对象此处调用的是无参构造器12Class classtype = Class.forName(&quot;com.lql.reflextest.Student&quot;);classtype.newInstance();">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://yoursite.com/img/1.png">
-<meta property="og:updated_time" content="2019-07-16T08:56:21.194Z">
+<meta property="og:updated_time" content="2019-07-16T09:02:30.705Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="通过反射实例化对象的两种方式">
-<meta name="twitter:description" content="通过类是实例化对象此处调用的是无参构造器 12Class classtype = Class.forName(&quot;com.lql.reflextest.Student&quot;);classtype.newInstance();  通过构造器实例化对象此处调用无参构造器实例化对象，可以说和上面的一样 1234567//调用无参构造器，实例化对象Constructor cons1 = classtype.g">
+<meta name="twitter:description" content="通过类是实例化对象此处调用的是无参构造器12Class classtype = Class.forName(&quot;com.lql.reflextest.Student&quot;);classtype.newInstance();">
 <meta name="twitter:image" content="https://yoursite.com/img/1.png">
   
     <link rel="alternative" href="/atom.xml" title="zom的博客" type="application/atom+xml">
@@ -172,9 +172,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li><p>通过类是实例化对象<br>此处调用的是无参构造器</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Class classtype = Class.forName(<span class="string">"com.lql.reflextest.Student"</span>);</span><br><span class="line">classtype.newInstance();</span><br></pre></td></tr></table></figure>
+<li>通过类是实例化对象<br>此处调用的是无参构造器<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Class classtype = Class.forName(<span class="string">"com.lql.reflextest.Student"</span>);</span><br><span class="line">classtype.newInstance();</span><br></pre></td></tr></table></figure>
+
 </li>
+</ul>
+<a id="more"></a>
+<ul>
 <li><p>通过构造器实例化对象<br>此处调用无参构造器实例化对象，可以说和上面的一样</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//调用无参构造器，实例化对象</span><br><span class="line">Constructor cons1 = classtype.getConstructor();</span><br><span class="line">Object ins1 = cons1.newInstance();</span><br><span class="line">System.out.println(&quot;---------------------&quot;);</span><br><span class="line">//调用有参构造器，实例化对象</span><br><span class="line">Constructor cons = classtype.getConstructor(int.class, String.class, String.class);</span><br><span class="line">Object ins = cons.newInstance(1,&quot;lql&quot;,&quot;M&quot;);</span><br></pre></td></tr></table></figure>
 </li>
@@ -401,11 +404,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color4">jvm</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jvm</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
