@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://yoursite.com">
-  <title>按键精灵学习笔记 | zom的博客</title>
+  <title>Java基础 | zom的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="按键精灵学习笔记">
-<meta name="keywords" content="按键精灵">
+  <meta name="description" content="变量局部变量：方法体内的变量，使用钱必须赋初始值成员变量：不必赋初始值（系统会根据其类型赋初始值 int的初始值为0）">
+<meta name="keywords" content="java,基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="按键精灵学习笔记">
-<meta property="og:url" content="https://yoursite.com/2019/07/09/按键精灵学习笔记/index.html">
+<meta property="og:title" content="Java基础">
+<meta property="og:url" content="https://yoursite.com/2019/07/25/Java基础/index.html">
 <meta property="og:site_name" content="zom的博客">
-<meta property="og:description" content="按键精灵学习笔记">
+<meta property="og:description" content="变量局部变量：方法体内的变量，使用钱必须赋初始值成员变量：不必赋初始值（系统会根据其类型赋初始值 int的初始值为0）">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-10T10:54:53.103Z">
+<meta property="og:updated_time" content="2019-08-02T03:20:33.410Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="按键精灵学习笔记">
-<meta name="twitter:description" content="按键精灵学习笔记">
+<meta name="twitter:title" content="Java基础">
+<meta name="twitter:description" content="变量局部变量：方法体内的变量，使用钱必须赋初始值成员变量：不必赋初始值（系统会根据其类型赋初始值 int的初始值为0）">
   
     <link rel="alternative" href="/atom.xml" title="zom的博客" type="application/atom+xml">
   
@@ -149,34 +149,33 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-按键精灵学习笔记" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java基础" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      按键精灵学习笔记
+      Java基础
     </h1>
   
 
         
-        <a href="/2019/07/09/按键精灵学习笔记/" class="archive-article-date">
-  	<time datetime="2019-07-09T10:00:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-09</time>
+        <a href="/2019/07/25/Java基础/" class="archive-article-date">
+  	<time datetime="2019-07-25T14:18:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//定义变量</span><br><span class="line">dim a = 1</span><br><span class="line">//控制台输出</span><br><span class="line">TracePrint &quot;a是：&quot;&amp;a&amp;&quot;来着&quot;</span><br><span class="line">//延时</span><br><span class="line">Delay 1000 </span><br><span class="line">TracePrint &quot;延时了1秒哟&quot;</span><br></pre></td></tr></table></figure>
+        <ul>
+<li>变量<br>局部变量：方法体内的变量，使用钱必须赋初始值<br>成员变量：不必赋初始值（系统会根据其类型赋初始值 int的初始值为0）<a id="more"></a></li>
+<li>java对对象的操作都是通过引用来实现的（java传的是引用）<br><code>person p = new person()</code><br>这里p是引用变量</li>
+<li>new 关键字完成了三件事<br>  为对象开辟了空间<br>  调用了类的构造方法<br>  返回了生成对象的引用值</li>
+<li>同一类生成的对象之间属性独立，但是方法共享</li>
+</ul>
 
-<a id="more"></a>
-<h2 id="找图"><a href="#找图" class="headerlink" title="找图"></a>找图</h2><p>利用抓抓工具对图片进行截取，选择区域找图再用其代码生成工具生成代码（记得把截取的图片放进按键精灵的附件里）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//定义函数</span><br><span class="line">Function 找红包</span><br><span class="line">	Dim intX,intY</span><br><span class="line">//区域找图 0,0,0,0 代表整个区域</span><br><span class="line">FindPic 0,0,0,0,&quot;Attachment:mony.png&quot;,&quot;000000&quot;,0,0.8,intX,intY</span><br><span class="line">If intX &gt; -1 And intY &gt; -1 Then</span><br><span class="line">  TracePrint &quot;找到红包啦，坐标是&quot;&amp;intX&amp;&quot;,&quot;&amp;intY</span><br><span class="line">  dim 红包 = Array(intX, intY)</span><br><span class="line">  //调用函数</span><br><span class="line">  Call 点击(红包)</span><br><span class="line">  Else </span><br><span class="line">  Delay 1000</span><br><span class="line">  TracePrint &quot;没找到&quot;</span><br><span class="line">End If</span><br><span class="line">End Function</span><br></pre></td></tr></table></figure>
-
-<h2 id="山海插件"><a href="#山海插件" class="headerlink" title="山海插件"></a>山海插件</h2><p>通过包名可以打开组件页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Import &quot;ShanHai.lua&quot;</span><br><span class="line">//获取当前页面元素（不稳定） ，可以通过其中信息定位到组件</span><br><span class="line">TracePrint ShanHai.GetUIXml() </span><br><span class="line">//获取当前页面包名</span><br><span class="line">TracePrint shanhai.GetTopActivity()</span><br><span class="line">//运行该包</span><br><span class="line">RunApp &quot;com.ifreetalk.ftalk&quot;, &quot;.module.equip.activity.EquipListNewActivity&quot;</span><br><span class="line">Delay 2000</span><br></pre></td></tr></table></figure>
       
 
       
@@ -189,7 +188,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">按键精灵</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">基础</a>
         		</li>
       		
 		</ul>
@@ -245,7 +248,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://yoursite.com/2019/07/09/按键精灵学习笔记/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://yoursite.com/2019/07/25/Java基础/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -259,18 +262,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/07/11/java基础学习/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/07/28/汇编命令学习/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          java基础学习
+          汇编命令学习
         
       </div>
     </a>
   
   
-    <a href="/2019/07/05/Oracle取出表1不在表2的数据/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Oracle高效取出表1不在表2的数据</div>
+    <a href="/2019/07/25/集合学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">集合学习笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   
