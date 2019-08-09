@@ -8,18 +8,21 @@
   <link rel="dns-prefetch" href="https://yoursite.com">
   <title>java多态,抽象,接口，单例模式 | zom的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#####　多态父类对象的引用可以指向子类对象">
+  <meta name="description" content="多态父类对象的引用可以指向子类对象">
 <meta name="keywords" content="java,多态,抽象,接口,static,final,单例模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java多态,抽象,接口，单例模式">
 <meta property="og:url" content="https://yoursite.com/2019/07/31/java多态,抽象,接口，单例模式/index.html">
 <meta property="og:site_name" content="zom的博客">
-<meta property="og:description" content="#####　多态父类对象的引用可以指向子类对象">
+<meta property="og:description" content="多态父类对象的引用可以指向子类对象">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-02T03:20:06.826Z">
+<meta property="og:image" content="https://yoursite.com/img/2.png">
+<meta property="og:image" content="https://yoursite.com/img/3.png">
+<meta property="og:updated_time" content="2019-08-02T08:33:45.769Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java多态,抽象,接口，单例模式">
-<meta name="twitter:description" content="#####　多态父类对象的引用可以指向子类对象">
+<meta name="twitter:description" content="多态父类对象的引用可以指向子类对象">
+<meta name="twitter:image" content="https://yoursite.com/img/2.png">
   
     <link rel="alternative" href="/atom.xml" title="zom的博客" type="application/atom+xml">
   
@@ -169,7 +172,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#####　多态<br>父类对象的引用可以指向子类对象</p>
+        <h5 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h5><p>父类对象的引用可以指向子类对象</p>
 <a id="more"></a>
 <p>Parent p = new Child(), 当调用子类方法时，父类和子类同时拥有相同方法时才能调用。<br><font color="red">指向谁就是调用谁的方法</font>，指向谁才能转换成谁<br>向上自动转型（子类就是父类），向下强制转型</p>
 <ul>
@@ -189,7 +192,7 @@
 <li><p>作用<br>与抽象类相似，提供一套规范</p>
 </li>
 <li><p>与抽象类差别<br>接口是特殊（严格）的抽象类，其中必须全是抽象方法，抽象类则可以存在具体的方法</p>
-<h5 id="static"><a href="#static" class="headerlink" title="static"></a>static</h5><p>修饰成员变量：表示一个类不管生成多少个实例，生成所有实例都访问这一个成员变量<br>如果一个成员变量是静态的，我们可以通过 类名.成员变量名 来访问它<br><font color="red">子类没法重写父类的静态方法，只能继承</font>。（父类的静态方法在子类中被隐藏了）<br><font color="red">被隐藏的方法，取决于引用的类型，就调用谁的方法</font></p>
+<h5 id="static"><a href="#static" class="headerlink" title="static"></a>static</h5><p>修饰成员变量：表示一个类不管生成多少个实例，生成所有实例都访问这一个成员变量<br>如果一个成员变量是静态的，我们可以通过 类名.成员变量名 来访问它<br><font color="red">子类没法重写父类的静态方法，只能继承</font>。（父类的静态方法在子类中被隐藏了）<br><font color="red">被隐藏的方法，取决于引用的类型，就调用谁的方法</font><br><img src="/img/2.png" alt="avtor"><br><img src="/img/3.png" alt="avtor"></p>
 </li>
 <li><p>静态代码块<br>加载到JVM上时就执行了（所以只会执行一次），构造方法是生成对象时执行的，所以静态代码块先执行<br>作用是完成些初始化工作<br><font color="red">静态的只能访问静态的，非静态的可以访问一切</font><br>不能再静态方法中使用this关键字</p>
 <h5 id="final"><a href="#final" class="headerlink" title="final"></a>final</h5><p>final可修饰类、属性、方法（表示终态）<br>final修饰类：终态类不能被继承<br>final修饰方法：不能被重写<br>final修饰属性：属性不能被重新赋值（指向地址不变就不算重新赋值）<br>一个类不能既是final又是abstract</p>
@@ -305,6 +308,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/08/02/包,equals,object,String,StringBuffer,包装，数组/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          包,equals,object,String,StringBuffer,包装，数组
+        
+      </div>
+    </a>
   
   
     <a href="/2019/07/28/汇编命令学习/" id="article-nav-older" class="article-nav-link-wrap">
@@ -442,6 +454,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">异常</a>
               </li>
              
@@ -454,7 +470,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">基础</a>
+                <a href="javascript:void(0)" class="js-tag color3">反射</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -482,7 +498,63 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">反射</a>
+                <a href="javascript:void(0)" class="js-tag color2">包</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">equals</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">object</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">String</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">StringBuffer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">包装</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">数组</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">按键精灵</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">泛型</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Integer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">可变参数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">枚举</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">静态导入</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">排序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">查找</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -494,7 +566,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">按键精灵</a>
+                <a href="javascript:void(0)" class="js-tag color4">Aryylist</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Linklist</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">HashSet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Iterator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">TreeSet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">HashMap</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">策略模式</a>
               </li>
             
             <div class="clearfix"></div>
