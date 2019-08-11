@@ -672,26 +672,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#####　冒泡排序</p>
-<ul>
-<li>升序<br>相邻两个数比较，将较大的一个放在后面。<br>会执行n-1趟，每趟比较（n-趟次-1）次。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bubble_sort</span><span class="params">(<span class="keyword">int</span>[] arg)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; arg.length-<span class="number">1</span>; j++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arg.length-j - <span class="number">1</span>; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (arg[i] &gt; arg[i + <span class="number">1</span>]) &#123;</span><br><span class="line">                    arg[i] = arg[i] + arg[i + <span class="number">1</span>];</span><br><span class="line">                    arg[i + <span class="number">1</span>] = arg[i] - arg[i + <span class="number">1</span>];</span><br><span class="line">                    arg[i] = arg[i] - arg[i + <span class="number">1</span>];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(<span class="string">"第"</span>+(j+<span class="number">1</span>)+<span class="string">"趟排序，排序结果为："</span>+ Arrays.toString(arg));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>#####　快速排序</p>
-<ul>
-<li>升序<br>以左边第一个作为基准数，先从右往左找比基准数小的，再从左往右找比基准数大的，最后交换这两个数，重复直到下标相遇。把基准数与相遇位置数调换（这时左边是比基准数小的，右边是比基准数大的）。以基准数为界，把排序数组分成左右两块，分别对这两块用最开始的方法重新排序。重复直到无法再分<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(startPosition&gt;endPosition)&#123;</span><br><span class="line">           <span class="keyword">return</span>;</span><br><span class="line">       &#125;</span><br><span class="line">           <span class="keyword">int</span> baseNum =arg[startPosition];</span><br><span class="line">           <span class="keyword">int</span> i = startPosition;</span><br><span class="line">           <span class="keyword">int</span> j = endPosition;</span><br><span class="line">           <span class="keyword">while</span> (i!=j)&#123;</span><br><span class="line">               <span class="comment">//找出右边比基准值小的数</span></span><br><span class="line">               <span class="keyword">while</span>(arg[j]&gt;=baseNum &amp;&amp; i&lt;j)&#123;</span><br><span class="line">                   j--;</span><br><span class="line">               &#125;</span><br><span class="line">               <span class="comment">//找出比基准值大的数</span></span><br><span class="line">               <span class="keyword">while</span> (arg[i]&lt;=baseNum &amp;&amp; i&lt;j)&#123;</span><br><span class="line">                   i++;</span><br><span class="line">               &#125;</span><br><span class="line">               <span class="comment">//交换找出的两个数</span></span><br><span class="line">               <span class="keyword">int</span> temp;</span><br><span class="line">               temp = arg[i];</span><br><span class="line">               arg[i] =arg[j];</span><br><span class="line">               arg[j] = temp;</span><br><span class="line">           &#125;</span><br><span class="line">       arg[startPosition]=arg[i];</span><br><span class="line">       arg[i]=baseNum;</span><br><span class="line">       quickSort(arg,startPosition,i-<span class="number">1</span>);</span><br><span class="line">       quickSort(arg,i+<span class="number">1</span>,endPosition);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h5 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h5><p>方法调用自身<br>一定有一个出口<br>从上到下是调用结果，从下到上是返回结果</p>
-<ul>
-<li>阶乘<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public static int factorial(int n)&#123;</span><br><span class="line">    if(n==1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">   return n*factorial(n-1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h5 id="二分查找法"><a href="#二分查找法" class="headerlink" title="二分查找法"></a>二分查找法</h5><p>取中间值和待查找的值对比（数据必须有序）</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> value)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> low =<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> hight =arr.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> mid;</span><br><span class="line">        <span class="keyword">while</span>(low&lt;=hight)</span><br><span class="line">        &#123;</span><br><span class="line">            mid = (low+hight)/<span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (arr[mid]==value)&#123;</span><br><span class="line">                <span class="keyword">return</span> mid;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (arr[mid]&gt;value)&#123;</span><br><span class="line">                hight = mid -<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (arr[mid]&lt;value)&#123;</span><br><span class="line">                low = mid +<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+        <h5 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h5><ul>
+<li>升序<br>相邻两个数比较，将较大的一个放在后面。
+        
+          <a class="article-more-a" href="/2019/08/03/排序，查找/#more">more >></a>
+        
       
 
       
@@ -1122,10 +1107,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jvm</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -1138,7 +1119,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
+                <a href="javascript:void(0)" class="js-tag color4">jvm</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1150,11 +1131,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">静态代理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">动态代理</a>
+                <a href="javascript:void(0)" class="js-tag color2">Oracle</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1182,7 +1159,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">junit</a>
+                <a href="javascript:void(0)" class="js-tag color5">静态代理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">动态代理</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1214,6 +1195,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">junit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">按键精灵</a>
               </li>
              
@@ -1227,10 +1212,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">汇编命令</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">注解</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1251,6 +1232,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">静态导入</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">注解</a>
               </li>
              
               <li class="article-tag-list-item">
