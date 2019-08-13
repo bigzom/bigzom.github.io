@@ -8,17 +8,14 @@
   <link rel="dns-prefetch" href="https://yoursite.com">
   <title>文件读取 | zom的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12345678910111213141516171819/** * 读取文件DEMO * @author a1036 */public class FileRead &amp;#123;    public static final int byteLength=200;    public static void main(String[] args) throws IOException &amp;#12">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="article">
 <meta property="og:title" content="文件读取">
 <meta property="og:url" content="https://yoursite.com/2019/08/13/文件读取/index.html">
 <meta property="og:site_name" content="zom的博客">
-<meta property="og:description" content="12345678910111213141516171819/** * 读取文件DEMO * @author a1036 */public class FileRead &amp;#123;    public static final int byteLength=200;    public static void main(String[] args) throws IOException &amp;#12">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-13T10:12:32.260Z">
+<meta property="og:updated_time" content="2019-08-13T10:15:08.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文件读取">
-<meta name="twitter:description" content="12345678910111213141516171819/** * 读取文件DEMO * @author a1036 */public class FileRead &amp;#123;    public static final int byteLength=200;    public static void main(String[] args) throws IOException &amp;#12">
   
     <link rel="alternative" href="/atom.xml" title="zom的博客" type="application/atom+xml">
   
@@ -168,8 +165,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 读取文件DEMO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> a1036</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileRead</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> byteLength=<span class="number">200</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">//将文件放入输入流</span></span><br><span class="line">        FileInputStream fi = <span class="keyword">new</span> FileInputStream(<span class="string">"D:/data/txt.txt"</span>);</span><br><span class="line">        <span class="comment">//字节数组，用于存放读取的信息</span></span><br><span class="line">        <span class="keyword">byte</span>[] bytes = <span class="keyword">new</span> <span class="keyword">byte</span>[byteLength];</span><br><span class="line">        <span class="keyword">int</span> length;</span><br><span class="line">        <span class="comment">//由于字节数组大小定义为200，所以需要循环读取</span></span><br><span class="line">        <span class="keyword">while</span>((length=fi.read(bytes,<span class="number">0</span>,byteLength))!=-<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="comment">//将字节转化为字符串</span></span><br><span class="line">            System.out.println(<span class="keyword">new</span> String(bytes,<span class="number">0</span>,length));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <ul>
+<li><a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 读取文件DEMO</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> a1036</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileRead</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> byteLength=<span class="number">200</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">//将文件放入输入流</span></span><br><span class="line">        FileInputStream fi = <span class="keyword">new</span> FileInputStream(<span class="string">"D:/data/txt.txt"</span>);</span><br><span class="line">        <span class="comment">//字节数组，用于存放读取的信息</span></span><br><span class="line">        <span class="keyword">byte</span>[] bytes = <span class="keyword">new</span> <span class="keyword">byte</span>[byteLength];</span><br><span class="line">        <span class="keyword">int</span> length;</span><br><span class="line">        <span class="comment">//由于字节数组大小定义为200，所以需要循环读取</span></span><br><span class="line">        <span class="keyword">while</span>((length=fi.read(bytes,<span class="number">0</span>,byteLength))!=-<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="comment">//将字节转化为字符串</span></span><br><span class="line">            System.out.println(<span class="keyword">new</span> String(bytes,<span class="number">0</span>,length));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
       
 
       
@@ -382,15 +382,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">jvm</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">异常</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jvm</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -518,11 +518,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">递归</a>
+                <a href="javascript:void(0)" class="js-tag color1">观察者模式</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">观察者模式</a>
+                <a href="javascript:void(0)" class="js-tag color3">递归</a>
               </li>
              
               <li class="article-tag-list-item">
