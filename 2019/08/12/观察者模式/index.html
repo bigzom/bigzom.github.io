@@ -17,7 +17,7 @@
 <meta property="og:description" content="特点定义一种一对多的依赖关系，每当被观察者对象发生改变，都会通知观察者（很像一核有难多核围观(๑•̀ㅂ•́)و✧）">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://yoursite.com/img/oberserver.png">
-<meta property="og:updated_time" content="2019-08-12T08:35:39.925Z">
+<meta property="og:updated_time" content="2019-08-12T11:45:11.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="观察者模式">
 <meta name="twitter:description" content="特点定义一种一对多的依赖关系，每当被观察者对象发生改变，都会通知观察者（很像一核有难多核围观(๑•̀ㅂ•́)و✧）">
@@ -184,6 +184,9 @@
   <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 观察者模式入口</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> a1036</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ObserverRun</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//实例化一个被观察者</span></span><br><span class="line">        Watched watched = <span class="keyword">new</span> WatchedImpl();</span><br><span class="line">        <span class="comment">//实例化三个观察者</span></span><br><span class="line">        Watcher watcher1 = <span class="keyword">new</span> WatcherImpl();</span><br><span class="line">        Watcher watcher2 = <span class="keyword">new</span> WatcherImpl();</span><br><span class="line">        Watcher watcher3 = <span class="keyword">new</span> WatcherImpl();</span><br><span class="line">        <span class="comment">//将三个观察者与被观察者关联</span></span><br><span class="line">        watched.addWatcher(watcher1);</span><br><span class="line">        watched.addWatcher(watcher2);</span><br><span class="line">        watched.addWatcher(watcher3);</span><br><span class="line">        <span class="comment">//通知观察者</span></span><br><span class="line">        watched.notifyWatcher(<span class="string">"好热啊"</span>);</span><br><span class="line">        <span class="comment">//移除一个观察者</span></span><br><span class="line">        watched.removeWatcher(watcher2);</span><br><span class="line">        watched.notifyWatcher(<span class="string">"想吃冰激凌"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>  运行结果：<br>  <img src="/img/oberserver.png" alt="avator"></p>
+<ul>
+<li>java内部也提供了对观察者模式的支持，详细了解JDK中提供的Observable（被观察者）与Observer（观察者）</li>
+</ul>
 
       
 
@@ -266,6 +269,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/08/12/内部类/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          内部类
+        
+      </div>
+    </a>
   
   
     <a href="/2019/08/11/将char转化为整数/" id="article-nav-older" class="article-nav-link-wrap">
@@ -395,14 +407,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异常</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
@@ -411,11 +415,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">反射</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">基础</a>
+                <a href="javascript:void(0)" class="js-tag color3">反射</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -423,15 +427,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">静态代理</a>
+                <a href="javascript:void(0)" class="js-tag color3">基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">动态代理</a>
+                <a href="javascript:void(0)" class="js-tag color3">异常</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">junit</a>
+                <a href="javascript:void(0)" class="js-tag color4">内部类</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -456,6 +460,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">单例模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">静态代理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">动态代理</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">junit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">charToInt</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -487,7 +507,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">charToInt</a>
+                <a href="javascript:void(0)" class="js-tag color5">按键精灵</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -496,10 +516,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">查找</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">按键精灵</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -528,6 +544,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">静态导入</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">递归</a>
               </li>
              
               <li class="article-tag-list-item">
