@@ -146,6 +146,296 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-如何学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/20/如何学习/">如何学习</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/20/如何学习/" class="archive-article-date">
+  	<time datetime="2019-09-20T06:36:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="如何精通一个领域"><a href="#如何精通一个领域" class="headerlink" title="如何精通一个领域"></a>如何精通一个领域</h3><ol>
+<li>拆分模块学习<br>将一个大的模块划分各个知识点学习，学习完每个知识点后关注与其它知识点的联系</li>
+<li>刻意练习<br>练习自己不熟悉的部分，其间如果感觉很不舒服，枯燥那么就对了</li>
+<li>反馈（精进过程）</li>
+</ol>
+<ul>
+<li>及时<br>学习完了要及时做下面其中一种反馈</li>
+<li>主动反馈<br>自己去找大神的作品，看看别人是怎么写的（LetCode）</li>
+<li>被动反馈<br>有老师给你指点做得不好得地方</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/20/如何学习/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-多线程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/18/多线程/">多线程</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/18/多线程/" class="archive-article-date">
+  	<time datetime="2019-09-18T02:18:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>线程生命周期<br>新生态：线程被实例化没有运行<br>就绪态：准备争抢CPU资源<br>运行态：抢到CPU资源，开始运行<br>阻塞态：失去CPU资源，准备再次争抢CPU资源<br>死亡态：线程被销毁<br><img src="/img/%E7%BA%BF%E7%A8%8B.png" alt="avtor"></p>
+</li>
+<li><p>线程开辟得两种方式<br>实现thread类、继承runnable接口<br>使用start开启</p>
+</li>
+<li><p>线程命名<br>通过构造器、通过setName方法<br>自定义线程命名<br>新建一个构造器然后调用super(name)或者this.setName(name)</p>
+</li>
+<li><p>线程休眠<br>休眠一秒<br>Thread.sleep(“1000”);</p>
+</li>
+<li><p>线程优先级<br>抢到CPU时间片的概率,范围1-10,默认5，在调用start方法之前设置。<br>setPriority(5)；</p>
+</li>
+<li><p>线程礼让<br>让线程回到就绪状态,重新争抢CPU资源<br>Thread.yield();</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>同步代码段<br>//对象锁  不变的对象<br>//方法锁  方法.class<br>synchronized(锁){<br> 同步的代码块<br>}</p>
+</li>
+<li><p>同步方法<br>用synchronized修饰的方法。<br>如果方法为静态：锁就是 当前类对象 类.class<br>如果方法为动态: 锁就是 this</p>
+</li>
+<li><p>显示锁 ReentrantLock</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ReentrantLock lk = <span class="keyword">new</span> ReentrantLock();</span><br><span class="line">lk.lock();<span class="comment">//上锁</span></span><br><span class="line"><span class="comment">//代码块</span></span><br><span class="line">lk.unlock();<span class="comment">//解锁</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>死锁<br>多个线程互相持有对方的锁，而不释放自生的锁</p>
+</li>
+<li><p>wait、notify、notifyAll<br>wait:释放 <strong>已持有</strong> 的锁，让其进入等待队列<br>notify:唤醒等待队列的一个线程，并让其进入线程池<br>notifyAll:唤醒等待队列的一种锁的线程，并使它们进入等待队列<br>使用：锁.wait();<br>有等待必有唤醒</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/18/多线程/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-面试题四" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/11/面试题四/">面试题四</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/11/面试题四/" class="archive-article-date">
+  	<time datetime="2019-09-11T02:33:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>有没有用过linux?你都用来干什么？<br>Linux是一个长时间运行比较稳定的操作系统，所以我们一般拿来做服务器。</li>
+<li>说一下linux的常用命令<br>Pwd 获取当前路径<br>Cd 跳转<br>su -u 切换到管理员<br>ls 列举命令</li>
+</ul>
+<p>文件：<br>　　tail　查看<br>　　rm -rf<br>    vi<br>    cat<br>文件夹:<br>　　mkdir</p>
+<hr>
+<ul>
+<li><p>你是用什么连接远程linux服务器的<br>需要依赖于Linux 服务器安装SSH服务端，一般依赖于 22端口<br>putty xshell<br>使用sftp客户端来连接sftp服务端，来来上传或下载文件<br>winscp/xftp(包含于xshell)</p>
+</li>
+<li><p>是否使用过云主机<br>使用过：<br>没使用：</p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>有没有做过数据库优化方面的事？</li>
+</ul>
+<p>1.创建索引<br>2.读写分离<br>3.查找，定位慢查询<br>4.缓存</p>
+<ul>
+<li>查找慢查询并定位慢查询<br>在项目自测或项目转测试之前，启动mysql数据库时开启慢查询，并把执行慢的语句写到日志中，然后再用explain分析查得慢得语句</li>
+</ul>
+<hr>
+<ul>
+<li>数据库优化之遵循范式<br>1NF 列得原子性<br>2NF 主键唯一性<br>3NF 外键</li>
+<li>选择合适得数据库引擎<br>　MyISAM 对事务要求不高，以查询添加为主如发帖回帖<br>　INNERDB 对事务要求高，保存重要数据，如订单表，用户表<br>　Memory 数据频繁变化，不需要入库<br>MyISAM和INNERDB区别<br>事务：MyISAM不支持事务<br>速度：MyISAM快<br>全文索引：MyISAM支持<br>锁机制：MyISAM支持表锁，Innerdb支持行锁<br>外键：MyISAM不支持外键</li>
+</ul>
+<hr>
+<ul>
+<li>选择合适得索引<br>普通索引：允许重复<br>唯一索引：不允许重复<br>主键索引：随着主键创建得唯一索引，不允许null<br>全文索引：用来对表中文本域进行索引，全文索引针对MYISAM引擎</li>
+<li>索引使用技巧<br>会占空间，会对DML操作造成影响</li>
+</ul>
+<p>1.所以适用于频繁查询，很少修改的表<br>使用注意：<br>复合索引，不使用第一部分就不会使用索引<br>模糊查询，通配符在左边就不会使用索引<br>条件中有or,必须全部都有索引<br>字符类型是字符串：必须用引号括起来<br>全文扫描快于索引那么久没必要用索引</p>
+<hr>
+<hr>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">题，linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/11/面试题四/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-idea用Maven创建Web项目注意" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -692,238 +982,9 @@
 
 
   
-    <article id="post-Thymeleaf" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/01/Thymeleaf/">Thymeleaf</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/01/Thymeleaf/" class="archive-article-date">
-  	<time datetime="2019-09-01T14:38:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="Thymeleaf简介"><a href="#Thymeleaf简介" class="headerlink" title="Thymeleaf简介"></a>Thymeleaf简介</h5><p>Thymeleaf是一个java开发的模板引擎，模板引擎是一个技术名词，是跨领域跨平台的概念。<br>可以使用它创建经过验证的XML与HTML模板。有利于前后端分离</p>
-        
-          <a class="article-more-a" href="/2019/09/01/Thymeleaf/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Thymeleaf</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/01/Thymeleaf/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-spring学习总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/31/spring学习总结/">spring学习总结</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/31/spring学习总结/" class="archive-article-date">
-  	<time datetime="2019-08-31T04:46:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-31</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>springMVC、mybatis、spring<br>springMVC用于代替servlet，对请求进行控制转发等<br>mybatis数据库框架<br>spring对实体类进行操作：IOC、DI、AOP等，主要作用解耦，降低复杂性，springmvc依赖spring
-        
-          <a class="article-more-a" href="/2019/08/31/spring学习总结/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/31/spring学习总结/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-springmvc转发与重定向" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/29/springmvc转发与重定向/">springmvc转发与重定向</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/29/springmvc转发与重定向/" class="archive-article-date">
-  	<time datetime="2019-08-29T10:00:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="转发与重定向"><a href="#转发与重定向" class="headerlink" title="转发与重定向"></a>转发与重定向</h5><p>spring mvc底层其实就是一个servlet，因此在spring mvc中也存在转发和重定向的概念。对于转发的页面，可以是在WEB-INF目录下的页面；而重定向的页面，是不能在WEB-INF目录下的。因为重定向相当于用户再次发出一次请求，而用户是不能直接访问WEB-INF目录下的资源的。</p>
-        
-          <a class="article-more-a" href="/2019/08/29/springmvc转发与重定向/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/29/springmvc转发与重定向/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 
@@ -1018,27 +1079,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">异常</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">jvm</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">反射</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1046,7 +1091,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">微服务</a>
+                <a href="javascript:void(0)" class="js-tag color5">java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">反射</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">异常</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">idea</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1054,7 +1115,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">idea</a>
+                <a href="javascript:void(0)" class="js-tag color4">微服务</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1067,6 +1128,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">题</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">jsp</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">EL表达式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">JSTL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1094,30 +1171,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">jsp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">EL表达式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">JSTL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">rest</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">前后端分离</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">servlet</a>
               </li>
              
@@ -1127,6 +1180,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">cookie</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">rest</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">前后端分离</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1146,15 +1207,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">内部类</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">静态代理</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">动态代理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">内部类</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1186,7 +1247,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">学习</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">junit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">多线程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1194,15 +1263,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">charToInt</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">序列化</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">按键精灵</a>
+                <a href="javascript:void(0)" class="js-tag color5">charToInt</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1219,6 +1284,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">方法引用</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">按键精灵</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">注解</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1246,11 +1319,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">注解</a>
+                <a href="javascript:void(0)" class="js-tag color5">类加载器</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">克隆</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">线程</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1266,23 +1343,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">类加载器</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">线程</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">线程同步</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">观察者模式</a>
+                <a href="javascript:void(0)" class="js-tag color5">装饰模式</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">装饰模式</a>
+                <a href="javascript:void(0)" class="js-tag color1">观察者模式</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1291,6 +1360,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">集合</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">静态资源</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1322,11 +1395,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">静态资源</a>
+                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jquery</a>
+                <a href="javascript:void(0)" class="js-tag color3">题，linux</a>
               </li>
             
             <div class="clearfix"></div>
